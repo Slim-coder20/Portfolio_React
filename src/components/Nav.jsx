@@ -8,17 +8,19 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   const linkClass = ({ isActive }) => [
-    'text-sm transition-colors underline-offset-4 hover:underline',
-    isActive ? 'text-amber-400' : 'text-gray-200 hover:text-white',
+    'relative text-sm text-gray-200 hover:text-white dark:text-slate-300 dark:hover:text-white transition-colors',
+    // underline animation
+    "after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-amber-400 after:transition-transform",
+    isActive ? 'text-amber-400 after:scale-x-100' : 'hover:after:scale-x-100',
   ].join(' ')
 
   const mobileLinkClass = ({ isActive }) => [
     'block rounded-md px-3 py-2',
-    isActive ? 'text-amber-400' : 'text-gray-200 hover:text-white hover:bg-white/10',
+    isActive ? 'text-amber-400' : 'text-gray-200 dark:text-slate-300 hover:text-white hover:bg-white/10 dark:hover:bg-white/5',
   ].join(' ')
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#2c3e50]/80 backdrop-blur shadow-lg">
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="h-16 flex items-center justify-between">
           {/* Logo */}
