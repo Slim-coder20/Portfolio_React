@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  portfolio-dev:
+    # Utilise votre Dockerfile de développement (nommé 'Dockerfile' selon votre première capture)
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    # Mappe le port de développement de Vite (5173) au port 5173 de votre machine
+    ports:
+      - "5173:5173"
+      
+    # Le volume permet le Hot Reload :
+    # Il lie le code source de votre machine (. /) au répertoire de travail dans le conteneur (/app).
+    volumes:
+      - .:/app
+      # Le volume suivant est crucial : il masque le node_modules local
+      # pour que le conteneur utilise son propre node_modules (/app/node_modules)
+      - /app/node_modules
+      
+    # Commande de démarrage en mode dev (correspond à la CMD de votre Dockerfile de dev)
+    command: npm run dev -- --host

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  portfolio-prod:
+    # 1. Utilise votre Dockerfile de production (Dockerfile.prod)
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      
+    # 2. Le port standard pour le déploiement
+    ports:
+      - "80:80"
+      
+   

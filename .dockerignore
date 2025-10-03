@@ -1,0 +1,13 @@
+# Dépendances Node
+node_modules
+# Fichiers de build locaux (si vous les générez)
+dist
+build
+# Fichiers de gestion de version
+.git
+.gitignore
+# Fichiers de Docker lui-même
+Dockerfile*
+docker-compose*
+# Fichiers de cache VS Code
+.vscode
