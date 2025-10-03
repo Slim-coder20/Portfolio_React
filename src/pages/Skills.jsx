@@ -14,15 +14,15 @@ export default function Skills() {
   return (
     <section id="skills" aria-label="Compétences" className="scroll-mt-24">
       <div className="max-w-screen-xl mx-auto px-4 lg:px-6 py-16 md:py-24">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
           Compétences
         </h1>
-        <p className="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed max-w-prose">
+        <p className="mt-3 leading-relaxed max-w-prose">
           Une sélection des technologies et outils que j'utilise pour créer des applications web modernes et performantes.
         </p>
 
         <div className="mt-8">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">Compétences clés</h2>
+          <h2 className="text-xl font-bold">Compétences clés</h2>
           <ul className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             <li className="group inline-flex items-center gap-2 rounded-full bg-white dark:bg-slate-800 px-3 py-2 ring-1 ring-black/5 dark:ring-slate-700 shadow transition hover:shadow-md hover:-translate-y-0.5 hover:ring-amber-200 focus-within:ring-amber-300">
               <SiReact className="text-sky-500 text-xl" aria-hidden="true" />
@@ -62,4 +62,5 @@ export default function Skills() {
     </section>
   )
 }
+
 
